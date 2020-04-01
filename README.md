@@ -40,3 +40,16 @@ GStreamer is a powerful streaming media framework that supports modular and pipe
 
 Now that we have a high-level understanding of NVENC/NVDEC and GStreamer, let’s see how do we install and setup the SDK with GStreamer. GStreamer uses a meson and ninja build system for its builds.
  
+---
+ 
+#### Install GStreamer on Ubuntu or Debian
+**Run the following command:**  
+```
+apt-get install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-doc gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio
+```
+
+**Building applications using GStreamer:**  
+The only other “development environment” that is required is the gcc compiler and a text editor. In order to compile code that requires GStreamer and uses the GStreamer core library, remember to add this string to your gcc command:
+```
+pkg-config --cflags --libs gstreamer-1.0
+```
